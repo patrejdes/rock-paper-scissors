@@ -10,6 +10,7 @@ function computerPlay (){
 // move selection human, insensitive
 function playerSelection (){
     let input = prompt();
+    input = input.toLowerCase();
     return input;
 } 
 
@@ -35,22 +36,23 @@ function letsPlay(playerSelection, computerPlay) {
         return message = "its a draw" + "         " + h +" - " + c;
     }
     else if(playerSelection == "paper" && computerPlay == "rock") {
-        return message = "congratulations, you won";
+        return message = "congratulations, you won" + "         " + ++h +" - " + c;
     }
     else if(playerSelection == "scissors" && computerPlay == "rock") {
-        return message = "good luck next, time you lost";
+        return message = "good luck next time, you lost" + "         " + h +" - " + ++c;
     
     }else if (playerSelection == "scissors" && computerPlay == "scissors") {
         return message = "its a draw" + "         " + h +" - " + c;
     }
     else if(playerSelection == "scissors" && computerPlay == "paper") {
-        return message = "congratulations, you won";
+        return message = "congratulations, you won" + "         " + ++h +" - " + c;
     }else {
         return message = "wrong value";
     }
 }
 //alert(letsPlay(playerSelection(), computerPlay()));
-alert(letsPlay("rock", "paper"));
-alert(letsPlay("rock", "paper"));
-alert(letsPlay("rock", "paper"));
-alert(letsPlay("rock", "paper"));
+alert(letsPlay(playerSelection(), computerPlay()));
+alert(letsPlay(playerSelection(), computerPlay()));
+alert(letsPlay(playerSelection(), computerPlay()));
+alert(letsPlay(playerSelection(), computerPlay()));
+alert(letsPlay(playerSelection(), computerPlay()));
